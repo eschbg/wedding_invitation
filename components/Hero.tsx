@@ -2,6 +2,7 @@ import React from "react";
 import { ChevronDown } from "lucide-react";
 
 import { WEDDING_INFO } from "../constants";
+import img15 from "../assets/15.jpg";
 
 export const Hero: React.FC = () => {
   const { bride, groom, weddingDate } = WEDDING_INFO;
@@ -12,7 +13,7 @@ export const Hero: React.FC = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url("../assets/15.jpg")',
+          backgroundImage: `url('${img15}')`,
         }}
       >
         <div className="absolute inset-0 bg-black/30"></div>

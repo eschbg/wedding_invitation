@@ -2,6 +2,16 @@ import React from "react";
 import { Section } from "./Section";
 import { MousePointer2 } from "lucide-react";
 
+import img1 from "../assets/1.jpg"
+import img4 from "../assets/4.jpg"
+import img5 from "../assets/5.jpg"
+import img6 from "../assets/6.jpg"
+import img8 from "../assets/8.jpg"
+import img16 from "../assets/16.jpg"
+import img25 from "../assets/25.png"
+import img31 from "../assets/31.jpg"
+import santo from "../assets/santo.jpg"
+
 export const Gallery: React.FC = () => {
   return (
     <div className="bg-white py-20 overflow-hidden">
@@ -18,53 +28,13 @@ export const Gallery: React.FC = () => {
       <div className="container mx-auto px-4 max-w-6xl space-y-32 md:space-y-48">
         {/* --- CHAPTER 01: THE SPARK (Asymmetric Layout) --- */}
         <Section className="relative">
-          {/* <div className="flex flex-col md:flex-row items-center md:items-start relative">
-            <span className="hidden md:block absolute -top-20 -left-10 text-[200px] font-serif text-wedding-light leading-none select-none opacity-60 z-0">
-              01
-            </span>
-
-            <div className="w-full md:w-5/12 relative z-10">
-              <div className="relative aspect-[3/4] overflow-hidden shadow-2xl">
-                <img
-                  src="../assets/santo.jpg"
-                  alt="Couple looking at each other"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
-                />
-              </div>
-              <div className="absolute -bottom-6 -right-6 bg-white p-4 shadow-lg z-20 max-w-[200px]">
-                <p className="font-serif italic text-wedding-primary text-lg">
-                  "The moment I saw you."
-                </p>
-              </div>
-            </div>
-
-            <div className="w-full md:w-6/12 md:pl-16 mt-12 md:mt-32 relative z-10">
-              <h3 className="font-serif text-xl md:text-5xl mb-6 leading-tight">
-                <span className="text-wedding-secondary italic"></span>
-              </h3>
-
-              <div className="md:absolute md:-right-20 md:-top-20 w-48 aspect-square border-4 border-white shadow-xl rotate-3">
-                <span></span>
-                <img
-                  src="../assets/8.jpg"
-                  alt="Holding hands detail"
-                  className="w-full h-full object-cover will-change-transform backface-visibility-hidden transform-gpu"
-                />
-                <img
-                  src="../assets/8.jpg"
-                  alt="Holding hands detail"
-                  className="w-full h-full object-cover will-change-transform backface-visibility-hidden transform-gpu"
-                />
-              </div>
-            </div>
-          </div> */}
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* --- CỘT 1: ẢNH LỚN --- */}
             <div className="lg:col-span-5 relative group">
               <div className="relative overflow-hidden rounded-t-[100px] shadow-2xl aspect-[3/4]">
                 <img
-                  src="../assets/santo.jpg"
+                  src={santo}
                   alt="Couple Moment"
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                   style={{ imageRendering: "crisp-edges" }}
@@ -121,7 +91,7 @@ export const Gallery: React.FC = () => {
                 group-hover:scale-105"
                 >
                   <img
-                    src="../assets/8.jpg"
+                    src={img8}
                     alt="Love"
                     className="w-full h-48 object-cover object-[center_20%] filter sepia-[0.1]"
                     style={{ imageRendering: "crisp-edges" }}
@@ -144,7 +114,7 @@ export const Gallery: React.FC = () => {
                 group-hover:scale-105"
                 >
                   <img
-                    src="./assets/31.jpg"
+                    src={img31}
                     alt="Forever"
                     className="w-full h-48 object-cover"
                     style={{ imageRendering: "crisp-edges" }}
@@ -177,7 +147,7 @@ export const Gallery: React.FC = () => {
 
               <div className="relative w-full max-w-md aspect-[4/5] overflow-hidden shadow-xl">
                 <img
-                  src="../assets/16.jpg"
+                  src={img16}
                   alt="Embrace"
                   className="w-full h-full object-cover hover:grayscale-0 transition-all duration-700"
                   style={{ imageRendering: "crisp-edges" }}
@@ -207,7 +177,7 @@ export const Gallery: React.FC = () => {
             {/* Item 1: Tall Slim */}
             <div className="col-span-6 md:col-span-4 row-span-2 relative overflow-hidden group">
               <img
-                src="./assets/5.jpg"
+                src={img5}
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 alt="Walking"
                 style={{ imageRendering: "crisp-edges" }}
@@ -227,7 +197,7 @@ export const Gallery: React.FC = () => {
             {/* Item 3: Wide */}
             <div className="col-span-12 md:col-span-4 row-span-2 relative overflow-hidden group">
               <img
-                src="./assets/1.jpg"
+                src={img1}
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 alt="Rings"
                 style={{ imageRendering: "crisp-edges" }}
@@ -238,7 +208,7 @@ export const Gallery: React.FC = () => {
             {/* Item 4: Bottom Left */}
             <div className="col-span-5 md:col-span-3 row-span-2 md:row-span-2 relative overflow-hidden mt-4 md:mt-0">
               <img
-                src="./assets/4.jpg"
+                src={img4}
                 className="w-full h-full object-cover will-change-transform backface-visibility-hidden transform-gpu"
                 alt="Smile"
                 style={{ imageRendering: "crisp-edges" }}
@@ -248,7 +218,7 @@ export const Gallery: React.FC = () => {
             {/* Item 5: Large Center */}
             <div className="col-span-7 md:col-span-5 row-span-3 relative overflow-hidden -mt-8 md:-mt-0 z-10 shadow-2xl border-4 border-white">
               <img
-                src="./assets/6.jpg"
+                src={img6}
                 className="w-full h-full object-cover will-change-transform backface-visibility-hidden transform-gpu"
                 alt="Kiss"
                 style={{ imageRendering: "crisp-edges" }}
@@ -263,7 +233,7 @@ export const Gallery: React.FC = () => {
             </div>
           </div>
           <img
-                src="./assets/25.png"
+                src={img25}
                 className="w-full h-full object-cover will-change-transform backface-visibility-hidden transform-gpu"
                 alt="Kiss"
               />

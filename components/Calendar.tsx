@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Section } from "./Section";
 import { TimeLeft } from "../types";
+import backgroundUrl from "../assets/30.jpg";
 
 export const Calendar: React.FC = () => {
   // Date: 24/01/2026 at 11:00 AM
@@ -35,7 +36,6 @@ export const Calendar: React.FC = () => {
   const calendarDays = Array.from({ length: 31 }, (_, i) => i + 1);
   const startDayOffset = 4; // Thursday
 
-  const backgroundUrl = "../assets/30.jpg";
 
   return (
     <div

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Music, Pause } from "lucide-react";
 
-const musicUrl = "../assets/le_duong.mp3";
+import musicUrl from "../assets/le_duong.mp3";
 
 export const AudioPlayer: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);

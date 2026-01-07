@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import chuhyImg from "../assets/chu-hy.png";
 
 interface SplashScreenProps {
   onOpenStart: () => void;
@@ -98,7 +99,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({
 
               {/* 3. The Double Happiness Character (White/Cream) */}
               <image
-                href="../assets/chu-hy.png"
+                href= {chuhyImg}
                 x="50"
                 y="50"
                 height="100"

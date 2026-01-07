@@ -3,20 +3,24 @@ import { Section } from "./Section";
 import { StoryEvent } from "../types";
 import { Heart } from "lucide-react";
 
+import img9 from "../assets/9.jpg";
+import img14 from "../assets/14.jpg";
+import img52 from "../assets/52.jpg";
+
 const events: StoryEvent[] = [
   {
     year: "Wedding",
     title:
       "Gặp anh nắng rót vàng tơ \nMây trôi cũng hóa nên thơ dịu hiền \nChiều về gió thoảng êm đềm \nHình như cũng ngọt như men rượu nồng",
     description: "My heart belongs to you",
-    image: "../assets/14.jpg",
+    image: img14,
     align: "left",
   },
   {
     year: "Một thương, hai nhớ, ba trông, Bốn chờ, năm đợi, sáu mong duyên nàng",
     title: "",
     description: "We are married",
-    image: "../assets/9.jpg",
+    image: img9,
     align: "right",
   },
   {
@@ -24,7 +28,7 @@ const events: StoryEvent[] = [
     title:
       "Anh về hái lấy buồng cau \n Trầu têm cánh phượng đội đầu mang sang.\nAnh về thưa với họ hàng\nBốn bên hai họ anh sang rước nàng.",
     description: "",
-    image: "../assets/52.jpg",
+    image: img52,
     align: "left",
   },
 ];
