@@ -33,7 +33,7 @@ export const Rsvp: React.FC = () => {
       body: JSON.stringify(payload),
       mode: "no-cors", // Bắt buộc để không bị lỗi CORS chặn
       headers: {
-        "Content-Type": "text/plain;charset=utf-8",
+        "Content-Type": "application/json",
       },
     })
       .then(() => {
