@@ -11,7 +11,7 @@ import { GoogleGenAI } from "@google/genai";
 
 // --- SỬA LỖI: TRỎ VỀ SERVER NODE.JS CỦA BẠN ---
 // Server của bạn đang chạy ở port 3001 (xem file server.js)
-const API_BASE_URL = "http://localhost:3001";
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 interface Wish {
   id: number | string;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Section } from "./Section";
 import { Send, CheckCircle } from "lucide-react";
 
-const API_BASE_URL = "http://localhost:3001";
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 export const Rsvp: React.FC = () => {
   const [formStatus, setFormStatus] = useState<
