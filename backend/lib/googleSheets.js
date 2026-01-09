@@ -61,3 +61,30 @@ export async function addWish(data) {
     throw error;
   }
 }
+
+export async function addRsvp(data) {
+    try {
+      const timestamp = new Date().toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' });
+      
+      // Ghi vào tab tên là "RSVP"
+      await sheets.spreadsheets.values.append({
+        spreadsheetId: SHEET_ID,
+        range: 'RSVP!A:E', 
+        valueInputOption: 'RAW',
+        requestBody: {
+          values: [[
+            timestamp,
+            data.name,
+            data.guests,
+            data.guestOf === 'groom' ? 'Nhà Trai' : 'Nhà Gái',
+            data.attendance === 'yes' ? 'Có' : 'Không'
+          ]],
+        },
+      });
+  
+      return { success: true };
+    } catch (error) {
+      console.error('Error writing RSVP to sheet:', error);
+      throw error;
+    }
+  }

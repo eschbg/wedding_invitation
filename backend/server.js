@@ -72,6 +72,41 @@ app.post('/api/wishes', async (req, res) => {
   }
 });
 
+app.post('/api/rsvp', async (req, res) => {
+    try {
+      // Rate limiting (Tùy chọn: dùng chung logic với wishes)
+      const ip = req.ip || req.connection.remoteAddress;
+      const rateLimitCheck = checkRateLimit(ip);
+      if (!rateLimitCheck.allowed) {
+        return res.status(429).json({ error: 'Vui lòng thử lại sau ít phút.' });
+      }
+  
+      const { name, guests, guestOf, attendance } = req.body;
+  
+      // Validate cơ bản
+      if (!name) {
+        return res.status(400).json({ error: 'Vui lòng nhập tên' });
+      }
+  
+      // Lưu vào Google Sheets
+      await addRsvp({
+        name,
+        guests,
+        guestOf,
+        attendance
+      });
+  
+      res.status(201).json({ 
+        success: true,
+        message: 'Xác nhận tham dự thành công!' 
+      });
+  
+    } catch (error) {
+      console.error('POST RSVP error:', error);
+      res.status(500).json({ error: 'Lỗi server, vui lòng thử lại sau.' });
+    }
+  });
+
 app.listen(PORT, () => {
   console.log(`✅ Server running on http://localhost:${PORT}`);
 });
