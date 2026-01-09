@@ -14,6 +14,7 @@ const auth = new google.auth.GoogleAuth({
 const sheets = google.sheets({ version: 'v4', auth });
 const SHEET_ID = process.env.GOOGLE_SHEET_ID;
 const SHEET_NAME = 'Sheet1';
+const SHEET_NAME_2 = 'Sheet2';
 
 export async function getWishes() {
   try {
@@ -69,7 +70,7 @@ export async function addRsvp(data) {
       // Ghi vào tab tên là "RSVP"
       await sheets.spreadsheets.values.append({
         spreadsheetId: SHEET_ID,
-        range: 'RSVP!A:E', 
+        range: `${SHEET_NAME_2}!A:E`, 
         valueInputOption: 'RAW',
         requestBody: {
           values: [[
