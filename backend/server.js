@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import { getWishes, addWish } from './lib/googleSheets.js';
+import { getWishes, addWish, addRsvp } from './lib/googleSheets.js';
 import { validateWish, sanitizeInput } from './lib/validation.js';
 import { checkRateLimit } from './lib/rateLimit.js';
 

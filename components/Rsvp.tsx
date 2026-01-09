@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Section } from "./Section";
 import { Send, CheckCircle } from "lucide-react";
 
-const API_BASE_URL = import.meta.env.VITE_API_URL;
+const API_BASE_URL = "http://localhost:3001";
 
 export const Rsvp: React.FC = () => {
   const [formStatus, setFormStatus] = useState<
@@ -31,7 +31,6 @@ export const Rsvp: React.FC = () => {
     fetch(`${API_BASE_URL}/api/rsvp`, {
       method: "POST",
       body: JSON.stringify(payload),
-      mode: "no-cors", // Bắt buộc để không bị lỗi CORS chặn
       headers: {
         "Content-Type": "application/json",
       },
